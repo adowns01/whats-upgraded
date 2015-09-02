@@ -1,3 +1,8 @@
+<container>
 <% @projects.each do |project| %>
-	<p>The most recent <%= project.name %> release is: <%= project.latest_version %></p>
+<row class="col-xs-12">
+	<p class="col-xs-1 col-xs-offset-5"><a href="<%= project.github_url%>"><%= project.name %></a></p>
+	<p class="col-xs-1"><%= project.latest_version %></p>
+</row>
 <% end %>
+</container>
