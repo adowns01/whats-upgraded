@@ -6,7 +6,6 @@ namespace :scrape do
   		page = mechanize.get(project.github_url)
   		version = page.at(project.selector).text.strip
   		project.update(latest_version: version)
-  		p "RAKE IS RUNNING"
 		end
   end
 
